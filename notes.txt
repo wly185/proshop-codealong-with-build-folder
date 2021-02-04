@@ -1,0 +1,52 @@
+03
+build react app
+npx create react app frontend
+cd frontend
+npm start
+
+04
+tidy up files and folder
+
+tidy up app.js, app.css
+.gitignore file add in nodemodule, env
+
+git initial commit - cd to root folder
+
+05 
+styling imports, header, footer component
+
+snippets extension -rafce shortcut
+create components/ header, footer
+npm i react-bootstrap - UI library, no need class use as component
+
+instead of npm i bootstrap
+bootswatch>lux>download
+park bootstrap.min.css into frontend/src
+index.js/ import bootstrap.min.css
+
+
+copy react-bootstrap nav code into Header
+add react-bootstrap containers
+import icon cdn from cdn js fontawesome. park into link tag index.html/ put at the bottom of head tag
+.py-3 meaning padding top bottom 3 for main tag
+margin left auto ml-auto for header component a tag
+80vh main for footer component
+
+06
+Product card component
+download resources. extract product data from /products.js  into /frontend/src
+map items into rows and cols into /screens/homescreen 
+images in public folder
+destructuring of props
+
+07
+Rating component
+typecheck with proptypes
+
+08 react router
+npm i react-router-dom react-router-bootstrap
+to style the links
+
+
+09
+props.match.params.id

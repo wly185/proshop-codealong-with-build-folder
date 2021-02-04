@@ -1,0 +1,1 @@
+image component issue on productscreen component
