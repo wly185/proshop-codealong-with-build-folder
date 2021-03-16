@@ -1,1 +1,146 @@
-image component issue on productscreen component
+image component issue on productscreen component [resolved] move to public folder
+
+
+11
+bug on the find() function. doesn't work when i use curly brace in the arrow function for find(). is that syntax not allowed?
+
+26
+
+problem with create store
+react 'type error: object is not a function'
+thunk(), middleware not an array somehow
+really creates a lot of problems. and bugs.
+
+29 
+bug with the error message passing to the Message component, it doesnt pass the message thrown by the error, is it due to error class?
+
+32
+store not connected -
+fixed bug with store local storage=> use windows.localStorage
+-issue with ternary operator
+
+32
+'store cannot be found' in devtools
+traced to --> local storage
+solution: use window.localStorage
+
+32
+
+flow: homescreen >> productscreen >> cartscreen
+trace: cartscreen, dispatch, qty
+
+suspect the item exists check has to be within the case statement
+on shrinking cannot see qty dropdown
+
+34 
+bug with cart item qty dropdown, fixed with 
+
+34 
+bug regarding onclick,handler,action,reducer
+due to eventhandler not passing values and proxy server issues
+console.log to check passed value
+patched on package json amended proxystatement to localhost:5000
+console.log action object on the reducer
+
+37
+mispelled bcrypt
+
+43
+will there be trycatch error handling and action.payload.error for every fail case? the app seems fragile
+
+44
+not too sure about this redirect query and all, why not just put it into 
+
+51
+cart actions  > saveshippingaddress > local storage > destructure data => {...data} so it will map correctly
+
+52
+nav looks ugly, pls make it responsive
+[resolved] - error in naming local storage 'shippingAddresss' - state not appearing in new window and useSelector+<p>{JSON.stringify(state)</p>}
+
+54
+map not working properly because of return statement, kept adding semi colons, 
+wrapped in parentheses
+
+image is not small when i shrink the viewport
+
+tofixed() returns a string so total price which is a calculated value will be wrong. 
+-use math.float and multiply by 100
+-or use tofixed in the render
+i have not gotten a complete fix i am just passing floats into my database
+
+56
+you will need useeffect whenever you use get request (list of items) and post (create an item)
+troubleshooting as usual with console.log on screen/dispatch, action, controller
+some trouble with mispelling of orderItems leading to frontend error
+backend error fixed the model default values which are not passed in the front end
+
+58
+having some issue with the order items
+looking at the model 
+since the order model contains an array of objects for the order items, as well as a reference to the product model 
+removed the repeated fields for the order items which are in the product model, 
+need to find out how to populate subdocument
+[resolved] - changed the order model, some parentheses/bracket issue
+[resolved] - used a nested query 
+    .populate({
+    path: 'orderItems.product',
+    select: 'name price image'
+  })
+
+59
+could not map fetched data=> mapping specific field, json stringify => react: typeerror __ is undefined
+json stringify entire object no issue
+[resolved] useSelector but deeper, instead of destructuring
+
+60
+instructor added if statement into useeffect to resolve the loading 500 error issue
+
+63
+proxy issue?
+anyway i followed his code exactly again and it worked
+console error: click_initiate_payment_reject
+
+
+64
+route error - cast error
+
+because the /:id route was above the /myorders route
+
+also token error in postman so i had to login and grab the token to add to the env token values
+
+65
+need to check if react bootstrap responsive is weird because the dropdown options keep disappearing
+
+69 
+is there a need for a delete user reducer?
+
+70
+can you reuse the update user profile route for the admin update user route?
+
+71
+i think react links use relative routes so if you key in the whole route you get double nested routes
+react bootstrap checkbox added an inline=true property to align the checkbox and the label
+
+72
+why the dispatch user update success no need send data
+
+80
+issues
+proxy error
+onchange handler unresponsive
+backslash
+
+todos
+tweak the route to include 400 error
+
+
+84
+react botstrap alert message component still not working
+
+85
+
+87
+careful route order '/top should be above the /:id
+
+clean up the styling for the carousel. why is the carousel not already polished?

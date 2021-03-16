@@ -1,20 +1,57 @@
-import React from 'react';
-import products from '../products';
+import React, { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { Row, Col } from 'react-bootstrap';
-
 import Product from '../components/Product';
-const HomeScreen = () => {
+import { listProducts } from '../actions/productActions';
+import { useDispatch, useSelector } from 'react-redux';
+import Message from '../components/Message';
+import Loader from '../components/Loader';
+import Paginate from '../components/Paginate';
+import ProductCarousel from '../components/ProductCarousel';
+import Meta from '../components/Meta';
+
+const HomeScreen = ({ match }) => {
+  const dispatch = useDispatch();
+  const keyword = match.params.keyword;
+  const pageNumber = match.params.pageNumber || 1;
+
+  const productList = useSelector((state) => state.productList);
+
+  const { loading, error, products, page, pages } = productList;
+
+  useEffect(() => {
+    dispatch(listProducts(keyword, pageNumber));
+  }, [dispatch, keyword, pageNumber]);
+
   return (
-    <div>
+    <>
+      <Meta />
+      {!keyword ? (
+        <ProductCarousel />
+      ) : (
+        <Link to='/' className='btn btn-light'></Link>
+      )}
       <h1>Latest products</h1>
-      <Row>
-        {products.map((product) => (
-          <Col key={product._id} sm={12} md={6} lg={4}>
-            <Product product={product} />
-          </Col>
-        ))}
-      </Row>
-    </div>
+      {/* <p>products {productList && JSON.stringify(products)}</p> */}
+      {loading && <Loader />}
+      {error && <Message variant='danger'>{error}</Message>}
+      {products && (
+        <>
+          <Row>
+            {products.map((product) => (
+              <Col key={product._id} sm={12} md={6} lg={4}>
+                <Product product={product} />
+              </Col>
+            ))}
+          </Row>
+          <Paginate
+            pages={pages}
+            page={page}
+            keyword={keyword ? keyword : ''}
+          ></Paginate>
+        </>
+      )}
+    </>
   );
 };
 
