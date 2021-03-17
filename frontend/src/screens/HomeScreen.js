@@ -26,11 +26,11 @@ const HomeScreen = ({ match }) => {
   return (
     <>
       <Meta />
-      {!keyword ? (
+      {/* {!keyword ? (
         <ProductCarousel />
       ) : (
         <Link to='/' className='btn btn-light'></Link>
-      )}
+      )} */}
       <h1>Latest products</h1>
       {/* <p>products {productList && JSON.stringify(products)}</p> */}
       {loading && <Loader />}
