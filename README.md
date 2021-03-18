@@ -1,4 +1,4 @@
-references - traversy media's udemy mern stack ecommerce course - proshop
+references - traversy media's udemy mern stack ecommerce course - proshop  
 https://www.udemy.com/course/mern-ecommerce/  
 https://github.com/bradtraversy/proshop_mern  
 
