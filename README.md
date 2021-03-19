@@ -7,8 +7,8 @@ https://documenter.getpostman.com/view/10550828/Tz5v1Ei4
 
 view  frontend:  
 run code in sandbox  
-https://codesandbox.io/s/traversy-mern-ecommerce-production-ughjt  
 https://ughjt.sse.codesandbox.io/  
+https://codesandbox.io/s/traversy-mern-ecommerce-production-ughjt 
 
 todos:  
 image file persistance, multer-s3
