@@ -1,5 +1,5 @@
-code along for developer bootcamp courses platform.  
-includes many to one mapping, geolocation, password reset email
+code along for for ecommerce react site with paypal payment functionality  
+includes admin dashboard and admin actions
 
 view backend routes:  
 routes documentation by postman  
