@@ -1,14 +1,11 @@
 code along for for ecommerce react site with paypal payment functionality  
 includes admin dashboard and admin actions
 
-view backend routes:  
-routes documentation by postman  
-https://documenter.getpostman.com/view/10550828/Tz5v1Ei4  
+app
+https://20210324t143253-dot-mern-ecommerce-308606.et.r.appspot.com/
 
-view  frontend:  
-run code in sandbox  
-https://ughjt.sse.codesandbox.io/  
-https://codesandbox.io/s/traversy-mern-ecommerce-production-ughjt 
+backend routes documentation
+https://documenter.getpostman.com/view/10550828/Tz5v1Ei4  
 
 todos:  
 image file persistance, multer-s3
