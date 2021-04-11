@@ -82,7 +82,7 @@ const ProductEditScreen = ({ match }) => {
       setImage(data);
       setUploading(false);
     } catch (error) {
-      console.error(error);
+      console.error(error.response.data);
       setUploading(false);
     }
   };
